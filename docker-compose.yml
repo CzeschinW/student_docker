@@ -9,7 +9,7 @@ services:
             - 3000:80
         volumes:
               # change the first part of this path to the location of your code on your computer
-            - "/Users/wilczeschin/Documents/IT/IT_2830/student_docker/module_2:/var/www/html"
+            - "/Users/wilczeschin/Documents/IT/IT_2830/student_docker/Module_2:/var/www/html"
 
     mariadb:
         image: mariadb:10.6.5
