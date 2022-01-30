@@ -1,0 +1,28 @@
+h2 {
+    color: skyblue;
+    font-family: 'Times New Roman', Times, serif;
+    /*makes header font larger*/
+    font-size: xx-large;
+}
+
+table {
+    border: 4px solid red;
+    /* makes boarder around the whole table blue*/
+    color: blue;
+}
+td {
+    /* creates a 2 pixel wide silver boarder around each cell of the table*/
+    border: 2px solid silver;
+}
+th {
+
+    color: navy;
+    /* creates a 2 pixel wide silver boarder around each header cell of the table*/
+    border: 2px solid silver;
+    /*makes table header font larger*/
+    font-size: large;
+}
+body{
+    /* puts a light yellow background on the page*/
+    background-color: lightyellow;
+}
