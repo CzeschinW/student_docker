@@ -14,5 +14,9 @@ function drawSide(){
     for($i = 0; $i < 3; $i++){
         $cards[] = random_int(-5, 5);
     }
-    return $cards;
+    print($cards[0]);
+    print ", ";
+    print($cards[1]);
+    print", ";
+    print($cards[2]);
 }

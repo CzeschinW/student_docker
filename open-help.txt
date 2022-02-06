@@ -1,2 +1,2 @@
-wilczeschin@Wils-MacBook-Pro IT_2830 % docker run -d -p 80:80 docker/getting-started
-wilczeschin@Wils-MacBook-Pro student_docker % docker-compose up -d
+docker run -d -p 80:80 docker/getting-started
+docker-compose up -d
