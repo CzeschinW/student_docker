@@ -1,2 +1,9 @@
 docker run -d -p 80:80 docker/getting-started
 docker-compose up -d
+
+
+<?php else: ?>
+            <form action="/index.php" method="post">
+            <input type="submit" name="begin" value="Begin">
+        </form>
+        <?php endif; ($_POST['begin'] == 'Begin') ?>

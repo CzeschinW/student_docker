@@ -9,7 +9,20 @@ services:
             - 3000:80
         volumes:
               # change the first part of this path to the location of your code on your computer
-            - "/Users/wilczeschin/Documents/IT/IT_2830/student_docker/Module_3:/var/www/html"
+            - "/Users/wilczeschin/Documents/IT/IT_2830/student_docker/Module_6:/var/www/html"
+    node:
+        image: node:16.14
+        working_dir: /home/node/app
+        environment:
+            NODE_ENV: development
+        volumes:
+              # change the first part of this path to the location of your code on your computer  
+            - "/Users/wilczeschin/Documents/IT/IT_2830/student_docker/Module_6:/var/www/html"
+        ports:
+            - 4000:4000
+        expose:
+            - "4000"
+        command: node app.js
 
     mariadb:
         image: mariadb:10.6.5
@@ -23,7 +36,16 @@ services:
             MYSQL_ROOT_PASSWORD: "rootpwd"
             MYSQL_USER: 'dbuser'
             MYSQL_PASSWORD: 'dbpass'
-            MYSQL_DATABASE: 'db'
+    adminer:
+        image: adminer
+        depends_on:
+            - mariadb
+        environment:
+            ADMINER_DEFAULT_SERVER: mariadb
+            ADMINER_DEFAULT_DB_DRIVER: mysql
+            ADMINER_DEFAULT_DB_HOST: mariadb
+        ports:
+            - 8080:8080
 
 volumes:
     db-volume:

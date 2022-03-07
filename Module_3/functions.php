@@ -19,4 +19,5 @@ function drawSide(){
     print($cards[1]);
     print", ";
     print($cards[2]);
+    
 }
